@@ -1,0 +1,12 @@
+header {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
+		url("../../../public/img/background.webp");
+	background-size: cover;
+	background-position: center;
+	padding: 150px 20px;
+	text-align: center;
+
+	h1 {
+		color: white;
+	}
+}
