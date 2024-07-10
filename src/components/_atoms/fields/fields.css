@@ -1,0 +1,10 @@
+.searchbar {
+	padding: 10px;
+	border-radius: 50px;
+	border: 0;
+	background-image: url("../../../../public/img/icons/ic_search_24px.svg");
+	background-repeat: no-repeat;
+	background-position: 95% center;
+	width: 100%;
+	max-width: 300px;
+}

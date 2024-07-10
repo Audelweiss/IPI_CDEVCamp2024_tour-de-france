@@ -1,7 +1,6 @@
 import "./stageDetails.css";
 
 function StageDetails({ stage }) {
-	console.log("StageDetails ", stage);
 	let formatDate = new Date(stage.date);
 	formatDate = formatDate.toLocaleDateString("fr-FR", {
 		month: "long",
