@@ -1,5 +1,6 @@
 import "./stageList.css";
 import Stage from "../../_atoms/stage";
+import { Link } from "react-router-dom";
 
 function StageList({ datas, setCurrent }) {
 	return (
@@ -7,8 +8,10 @@ function StageList({ datas, setCurrent }) {
 			{datas.length > 0 ? (
 				<ul className="stage-list">
 					{datas.map((stage, index) => (
-						<li key={index} onClick={() => setCurrent(stage)}>
-							<Stage {...stage} />
+						<li key={index}>
+							<Link to={`/stage/${index}`}>
+								<Stage {...stage} />
+							</Link>
 						</li>
 					))}
 				</ul>

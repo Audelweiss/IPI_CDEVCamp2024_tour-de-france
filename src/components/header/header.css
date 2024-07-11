@@ -1,3 +1,14 @@
+nav {
+	padding: 20px;
+	a {
+		text-decoration: none;
+		margin: 20px;
+	}
+	.active {
+		font-weight: bold;
+	}
+}
+
 header {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
 		url("../../../public/img/background.webp");

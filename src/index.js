@@ -1,14 +1,39 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+//pages
+import Home from "./pages/Home";
+import Stage from "./pages/Stage";
+import Page404 from "./pages/404";
+import Header from "./components/header/header";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const router = createBrowserRouter([
+	{
+		path: "/",
+		element: <Home h1="Tour de france 2024" />,
+	},
+	{
+		path: "/about",
+		element: <Header title="A propos du tour" />,
+	},
+	{
+		path: "/stage/:id",
+		element: <Stage h1="Étape" />,
+		errorElement: <Page404 />,
+	},
+	{
+		path: "*",
+		element: <Page404 />,
+	},
+]);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+	<React.StrictMode>
+		<RouterProvider router={router} />
+	</React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
