@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Stage from "./pages/Stage";
 import Page404 from "./pages/404";
 import Header from "./components/header/header";
+import Schools from "./pages/Schools";
 
 const router = createBrowserRouter([
 	{
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
 	{
 		path: "/stage/:id",
 		element: <Stage h1="Étape" />,
+		errorElement: <Page404 />,
+	},
+	{
+		path: "/schools",
+		element: <Schools />,
 		errorElement: <Page404 />,
 	},
 	{
